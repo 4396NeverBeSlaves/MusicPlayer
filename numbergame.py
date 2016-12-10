@@ -20,6 +20,6 @@ while i>1 : #循环条件
     print("还有",i-1,"次机会。")
     guess= int(input("!!!请重新输入一个数字:"))
     i=i-1
-if guess!=n: #当while循环结束并符合判定条件
+if guess!=n: #当while循环结束并符合判定条件时执行
     print("其实，这个数是",n)
 print('游戏结束')
