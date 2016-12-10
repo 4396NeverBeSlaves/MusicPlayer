@@ -1,2 +1,2 @@
 # Python-Study
-ѧϰPython���õ��Ĵ��롣
+在Python学习中用到的代码。
