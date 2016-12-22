@@ -1,2 +1,3 @@
-# Python-Study
-在Python学习中用到的代码。
+# MyCode-Study
+<li>在学习编程时做的小程序。
+<li>MusicPlayer为C#.
