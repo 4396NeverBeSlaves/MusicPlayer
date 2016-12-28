@@ -158,12 +158,10 @@ namespace MusicPlayer
             if (playmusic == true)
             {
                 playbutton.Image = Resource1.pause_up;
-                playtimer1.Enabled = true;
             }
             else
             {
                 playbutton.Image = Resource1.play_up;
-                playtimer1.Enabled = false ;
             }
 
         }
@@ -174,33 +172,37 @@ namespace MusicPlayer
         {
             this.axWindowsMediaPlayer1.settings.volume = voice;
         }
-        //播放与暂停音乐
 
+
+        //播放与暂停音乐
         private void playbutton_Click(object sender, EventArgs e)
         {
-            if (playmusic == false )
+            try{
+            if (playmusic == false)
             {
-                if (axWindowsMediaPlayer1.URL.ToString() == "")
-                {
-                    //如果没有选中歌曲的话点击播放默认为第一首
-                    axWindowsMediaPlayer1.URL = pathforms.PathListbox.Items[0].ToString();
-                    playmusic = true;
-                    musicname_label.Text = transParentListBox1.Items[0].ToString();
-                    transParentListBox1.SetSelected(0,true);
-                }
+                    if (axWindowsMediaPlayer1.URL.ToString() == "")
+                    {
+                        //如果没有选中歌曲的话点击播放默认为第一首
+                        axWindowsMediaPlayer1.URL = pathforms.PathListbox.Items[0].ToString();
+                        playmusic = true;
+                        musicname_label.Text = transParentListBox1.Items[0].ToString();
+                        transParentListBox1.SetSelected(0, true);
+                    }
                     this.axWindowsMediaPlayer1.Ctlcontrols.play();
-                    playtimer1.Enabled = true;
                     //playbutton.Image = Resource1.pause_up;
                     playmusic = true;
-            }
-            else 
+                }
+            else
             {
                 this.axWindowsMediaPlayer1.Ctlcontrols.pause();
                 playbutton.Image = Resource1.pause_up;
                 playmusic = false;
-                playtimer1.Enabled = false;
             }
+            }
+            catch(Exception ) { MessageBox.Show("请在下方右键添加歌曲！","提示", MessageBoxButtons.OK); }
         }
+
+
         //添加音乐
         private void 添加音乐ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -252,13 +254,11 @@ namespace MusicPlayer
             }
             if (flag == 0)
                 return;
-            playtimer1.Enabled = false;
             axWindowsMediaPlayer1.URL =pathforms.PathListbox.Items[flag - 1].ToString();
             musicname_label.Text = transParentListBox1.Items[flag - 1].ToString();
             transParentListBox1.SelectedIndex = flag - 1;
             playbutton.Image = Resource1.pause_up;
             playmusic = true;
-            playtimer1.Enabled = true;
         }
 
         //下一曲
@@ -273,13 +273,11 @@ namespace MusicPlayer
             }
             if (flag == transParentListBox1.Items.Count-1)
                 return;
-            playtimer1.Enabled = false;
             axWindowsMediaPlayer1.URL = pathforms.PathListbox.Items[flag +1].ToString();
             musicname_label.Text = transParentListBox1.Items[flag + 1].ToString();
             transParentListBox1.SelectedIndex = flag + 1;
             playbutton.Image = Resource1.pause_up;
             playmusic = true;
-            playtimer1.Enabled = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)

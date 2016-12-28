@@ -38,14 +38,12 @@
             this.previousbutton = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加音乐ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.清空列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.MusicNamePanel = new System.Windows.Forms.Panel();
             this.musicname_label = new System.Windows.Forms.Label();
             this.playlist = new System.Windows.Forms.ListBox();
-            this.playtimer1 = new System.Windows.Forms.Timer(this.components);
             this.panelbackvioce1 = new System.Windows.Forms.Panel();
             this.viocepanel2 = new System.Windows.Forms.Panel();
             this.transParentListBox1 = new MusicPlayer.TransParentListBox();
@@ -156,10 +154,9 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.添加音乐ToolStripMenuItem,
-            this.清空列表ToolStripMenuItem,
             this.toolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
             // 
             // 添加音乐ToolStripMenuItem
             // 
@@ -167,12 +164,6 @@
             this.添加音乐ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.添加音乐ToolStripMenuItem.Text = "添加音乐";
             this.添加音乐ToolStripMenuItem.Click += new System.EventHandler(this.添加音乐ToolStripMenuItem_Click);
-            // 
-            // 清空列表ToolStripMenuItem
-            // 
-            this.清空列表ToolStripMenuItem.Name = "清空列表ToolStripMenuItem";
-            this.清空列表ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.清空列表ToolStripMenuItem.Text = "清空列表";
             // 
             // toolStripMenuItem1
             // 
@@ -319,12 +310,10 @@
         private System.Windows.Forms.PictureBox sound;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 添加音乐ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 清空列表ToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Panel MusicNamePanel;
         private System.Windows.Forms.Label musicname_label;
-        private System.Windows.Forms.Timer playtimer1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         public System.Windows.Forms.ListBox playlist;
         private TransParentListBox transParentListBox1;
